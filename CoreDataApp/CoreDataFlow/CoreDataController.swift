@@ -15,6 +15,10 @@ class CoreDataController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup()
+    }
+    
+    func setup() {
         viewModel.fetchItems()
         viewModel.fetchItemCallback = {
             self.table.reloadData()
